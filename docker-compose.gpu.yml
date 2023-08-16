@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ml_environment:
+    build:
+        context: .
+        dockerfile: ./Dockerfile.gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: ["gpu"]
