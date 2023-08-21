@@ -11,4 +11,6 @@ services:
       - type: bind
         source: .
         target: /workspace
+    ports:
+      - "8888:8888"
     command: tail -F anything
