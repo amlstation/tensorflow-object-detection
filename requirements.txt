@@ -1,0 +1,4 @@
+black==22.3.0
+jupyterlab==4.0.5
+python-decouple==3.7
+tflite-runtime==2.13.0

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ml_environment:
+    restart: always
+    container_name: tf_object_detection
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+    ports:
+      - "8888:8888"
+    command: tail -F anything
