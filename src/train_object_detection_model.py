@@ -9,7 +9,12 @@ from datetime import datetime
 from google.protobuf import text_format
 from object_detection.protos import pipeline_pb2, preprocessor_pb2
 
-from definitions import DATASETS_PATH, MODELS_PATH, TF_OBJECT_DETECTION_API_PATH
+from definitions import (
+    DATASETS_PATH,
+    MODELS_PATH,
+    TF_OBJECT_DETECTION_API_PATH,
+    WORKING_DIR,
+)
 
 from dataset_utils import (
     check_dataset_split,
@@ -99,7 +104,7 @@ def generate_label_map(labels):
 def generate_record(subset, annotation_format, classes):
     classes = str(classes).replace(",", "")[1:-1]
     os.system(
-        f"python3 /workspace/src/generate_tfrecord.py \
+        f"python3 {WORKING_DIR}/src/generate_tfrecord.py \
         -i {DATASET_PATH}/{subset}.txt \
         -l {ANNOTATIONS_PATH}/label_map.pbtxt \
         -o {ANNOTATIONS_PATH}/{subset}.record \
