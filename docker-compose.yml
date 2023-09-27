@@ -13,4 +13,5 @@ services:
         target: /workspace
     ports:
       - "8888:8888"
+      - "6006:6006"
     command: tail -F anything
