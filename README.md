@@ -39,3 +39,9 @@ You may skip the `--build` and `--force-recreate` flags depending if there are n
 You can access the Jupyter Lab instance at <http://127.0.0.1:8888> in your browser.
 
 From this point forward you can follow the instruction in TensorFlow-Object-Detection.ipynb
+
+## Using the Marketplace API
+
+You can download datasets and pretrained models directly from the [Marketplace API](https://marketplace.amlstation.com/api).
+
+For more information, see the [README.API.md](./README.API.md) page.
