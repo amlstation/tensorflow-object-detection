@@ -72,9 +72,6 @@ def main():
     parser.add_argument("--score_threshold", type=float, default=0.4)
     args = parser.parse_args()
 
-    global MODELS_PATH
-    MODELS_PATH = "/workspace/models"
-
     detection_model = Model(args.model_name)
 
     label_map_path = os.path.join(
